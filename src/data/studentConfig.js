@@ -1,0 +1,21 @@
+export const studentConfig = {
+  name: "Vivek Sangani",
+  initials: "VS",
+  enrollmentNo: "24CE108", // Update with your official roll/enrollment number
+  university: "Charotar University of Science and Technology",
+  faculty: "CSPIT-IT",
+  department: "Information Technology",
+  subject: "Advanced Web Development Frameworks",
+  subjectCode: "ITUE301",
+  semester: 5,
+  academicYear: "2026–27",
+  email: "vsangani2337@gmail.com",
+  phone: "+91 9924097202",
+  location: "Anand, Gujarat, India",
+  githubUrl: "https://github.com/vsangani2337",
+  githubUsername: "vsangani2337",
+  linkedinUrl: "https://linkedin.com/in/viveksangani",
+  tagline: "I build dependable web applications and developer tools with clean architecture and thoughtful engineering.",
+  bio: "B.Tech student at Charotar University of Science and Technology with strong foundations in C++, Data Structures, Algorithms, and full-stack web development with React, Node.js, Express, and MongoDB.",
+  resumeUrl: "#",
+};
