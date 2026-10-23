@@ -13,8 +13,8 @@ import "./listeners.js";
 
 const app = express();
 const port = Number(process.env.PORT || 5000);
-const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/taskmanager-pr7";
-const jwtSecret = process.env.JWT_SECRET;
+const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/taskdb";
+const jwtSecret = process.env.JWT_SECRET || "supersecretjwtkey_practical_charusat_24ce108";
 const allowedOrigins = new Set(["http://localhost:5173", "http://127.0.0.1:5173"]);
 
 // Request logger
