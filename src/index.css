@@ -1,12 +1,99 @@
-html, body {
+*,
+*::before,
+*::after {
   margin: 0;
-  min-width: 320px;
-  min-height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-light: rgba(99, 102, 241, 0.08);
+  --primary-glow: rgba(99, 102, 241, 0.15);
+  --border: #e2e8f0;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --transition: 0.2s ease;
+
+  /* Aliases for legacy component compatibility */
+  --bg: var(--bg-primary);
+  --bg-alt: var(--bg-tertiary);
+  --surface: var(--bg-secondary);
+  --card-bg: var(--bg-secondary);
+  --text: var(--text-primary);
+  --text-color: var(--text-primary);
+  --muted-color: var(--text-muted);
+  --border-color: var(--border);
+  --accent: var(--primary);
+  --accent-ink: var(--primary-hover);
+  --status: #22c55e;
+  --success: #22c55e;
+  --success-light: rgba(34, 197, 94, 0.1);
+}
+
+.app.dark,
+[data-theme="dark"],
+body[data-theme="dark"] {
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+  --primary-light: rgba(129, 140, 248, 0.12);
+  --primary-glow: rgba(129, 140, 248, 0.15);
+  --border: #334155;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.25), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+
+  --bg: var(--bg-primary);
+  --bg-alt: var(--bg-tertiary);
+  --surface: var(--bg-secondary);
+  --card-bg: var(--bg-secondary);
+  --text: var(--text-primary);
+  --text-color: var(--text-primary);
+  --muted-color: var(--text-muted);
+  --border-color: var(--border);
+  --accent: var(--primary);
+  --accent-ink: var(--primary);
+  --status: #4ade80;
+  --success: #4ade80;
+  --success-light: rgba(74, 222, 128, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Manrope', Arial, sans-serif;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+img { max-width: 100%; display: block; }
